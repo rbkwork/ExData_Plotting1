@@ -18,9 +18,13 @@ data<-data[,c(1,7:9)]
 
 ##plot it
 
-png("plot2.png")
+png("plot3.png")
 
 with(data,plot(Date, Sub_metering_1, ylab = "Energy sub metering",type="n",pin=c(1,1)))
+with(data,plot(Date, Global_active_power,ylab = "Global Active Power (kilowatts)",type="l"),pin=c(1,1))
+
+
+
 with(data,lines(Date, Sub_metering_3,col="blue"))
 with(data,lines(Date, Sub_metering_2,col="red"))
 with(data,lines(Date, Sub_metering_1))
